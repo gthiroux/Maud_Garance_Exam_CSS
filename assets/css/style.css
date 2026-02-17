@@ -265,11 +265,55 @@ body {
   }
 }
 
+.products {
+  width: 100%;
+  height: auto;
+  display: flex;
+  gap: 4rem;
+  margin: 2rem;
+}
+.products__img {
+  width: 40%;
+  height: auto;
+}
+.products__img img {
+  width: 100%;
+  height: 100%;
+}
+.products__content {
+  width: 50%;
+  gap: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+.products__content__title {
+  font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 48px;
+  text-transform: uppercase;
+  font-size: 48px;
+  color: #48c7b3;
+}
+@media screen and (max-width: 600px) {
+  .products__content__title {
+    font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 24px;
+  }
+}
+.products__content__materials {
+  width: 40%;
+  display: flex;
+  justify-content: space-between;
+}
+
 .contact {
   width: 100%;
   height: auto;
   gap: 1rem;
-  padding: 1rem;
+  padding: 2rem;
   margin-bottom: 1rem;
   background: #48c7b3;
   display: flex;
@@ -306,6 +350,7 @@ body {
   width: 50%;
   text-align: center;
   margin: 1rem;
+  color: #282729;
 }
 @media screen and (max-width: 600px) {
   .contact__content {
@@ -355,6 +400,7 @@ body {
   font-weight: 400;
   font-style: normal;
   font-size: 16px;
+  color: #282729;
 }
 
 .footer {
