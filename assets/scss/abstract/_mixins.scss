@@ -108,16 +108,28 @@
     font-size: $font-size-sm;
 }
 
-@mixin para-md-sm {
+@mixin para-sm-md {
     font-family: $segoe;
     font-weight: $font-weight-md;
     font-style: normal;
     font-size: $font-size-sm;
 }
 
-@mixin para-lg-sm {
+@mixin para-sm-lg {
     font-family: $segoe;
     font-weight: $font-weight-lg;
     font-style: normal;
     font-size: $font-size-sm;
+}
+
+@mixin tablette() {
+    @media screen and (max-width:1275px) {
+        @content;
+    }
+}
+
+@mixin telephone() {
+    @media screen and (max-width:600px) {
+        @content;
+    }
 }

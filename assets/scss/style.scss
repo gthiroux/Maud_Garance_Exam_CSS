@@ -24,10 +24,19 @@ body {
     box-shadow: 4px 5px 5px $primary;
     background-color: $background;
     text-transform: uppercase;
+    position: absolute;
     z-index: 2;
 
     &__name {
         @include title-lg();
+
+        @include tablette() {
+            @include title-md();
+        }
+
+        // @include telephone() {
+        //     @include title-md();
+        // }
 
         &__span {
             @include title-lg();
@@ -35,9 +44,12 @@ body {
         }
     }
 
-
     &__nav {
         width: 50%;
+
+        @include tablette() {
+            display: none;
+        }
 
         &__list {
             display: flex;
@@ -46,18 +58,26 @@ body {
 
             &__item {
                 color: $white;
+
+                &:hover {
+                    color: $primary;
+                    text-decoration: underline $primary;
+                }
             }
         }
     }
 
     &__icon {
         display: flex;
-        gap: 1rem;
-    }
+        gap: 2rem;
 
+        & ion-icon {
+            font-size: 2rem;
+        }
+    }
 }
 
-.heroe {
+.hero {
     height: 100vh;
     width: 100%;
     background-image: url("/assets/img/img-hero-section.jpeg");
@@ -68,10 +88,14 @@ body {
     &__border {
         display: flex;
         justify-content: center;
-        padding: .8rem;
+        padding: 0.8rem;
         width: 14rem;
         border: solid 2px $white;
         border-radius: 8px;
+
+        @include tablette() {
+            padding: 0.4rem;
+        }
     }
 
     &__content {
@@ -82,13 +106,33 @@ body {
         display: flex;
         flex-direction: column;
 
+        @include tablette() {
+            width: 75%;
+        }
+
         &__title {
             @include title-3xl();
             text-transform: uppercase;
 
+            @include tablette() {
+                @include title-xxl();
+            }
+
+            @include telephone() {
+                @include title-xl();
+            }
+
             &__span {
                 @include title-3xl();
                 color: $primary;
+
+                @include tablette() {
+                    @include title-xxl();
+                }
+
+                @include telephone() {
+                    @include title-xl();
+                }
             }
         }
 
@@ -97,9 +141,167 @@ body {
             justify-content: center;
             gap: 2rem;
             margin-top: 2rem;
+
+            @include telephone() {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    }
+}
+
+.marques {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin: 1rem;
+
+    @include telephone() {
+        flex-wrap: wrap
+    }
+
+    & p {
+        @include title-lg();
+
+        @include telephone() {
+            @include title-lg ();
+        }
+    }
+}
+
+.button-primary {
+    @include para-md-lg();
+    background-color: $primary;
+    padding: 0.6rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    gap: 1rem;
+    display: flex;
+    align-items: center;
+    border: none;
+    border-radius: 10px;
+    color: $background;
+    text-transform: uppercase;
+
+    & ion-icon {
+        color: $background;
+    }
+
+    @include tablette() {
+        @include para-sm-md();
+    }
+
+    @include telephone() {
+        @include para-sm-md();
+    }
+}
+
+.button-secondary {
+    background: none;
+    border-color: $white;
+    @include para-md-lg();
+    color: $white;
+    padding: 0.6rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    border-radius: 10px;
+    text-transform: uppercase;
+
+    @include tablette() {
+        @include para-sm-md();
+    }
+
+    @include telephone() {
+        @include para-sm-md();
+    }
+}
+
+.contact {
+    width: 100%;
+    height: auto;
+    gap: 1rem;
+    padding: 2rem;
+    margin-bottom: 1rem;
+    background: $primary;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    &__mini-title {
+        @include para-sm-sm();
+        color: $background;
+    }
+
+    &__title {
+        @include title-xl();
+        text-transform: uppercase;
+        font-size: $font-size-xl;
+        color: $background;
+        text-align: center;
+
+        @include telephone() {
+            @include title-lg();
         }
     }
 
+    &__content {
+        width: 50%;
+        text-align: center;
+        margin: 1rem;
+        color: $background;
+
+
+        @include telephone() {
+            width: 100%;
+        }
+    }
+
+    &__form {
+        display: flex;
+        gap: 1rem;
+        justify-content: center;
+        align-items: center;
+
+        @include tablette() {
+            flex-direction: column;
+        }
+
+        &__input {
+            width: 30rem;
+            height: 3rem;
+            padding: 1rem;
+            border-radius: 1rem;
+            background: $background;
+            color: $white;
+
+            @include telephone() {
+                width: 90vw;
+            }
+        }
+
+        &__btn {
+            background: $background;
+            color: $white;
+
+            @include telephone() {
+                width: 100%;
+                display: flex;
+                justify-content: center;
+            }
+
+            & ion-icon {
+                color: $white;
+            }
+        }
+    }
+
+    &__span {
+        @include para-sm-sm();
+        color: $background;
+
+    }
 }
 
 .footer {
@@ -110,13 +312,15 @@ body {
     display: flex;
     flex-direction: column;
 
-
-
     &__list {
         display: flex;
         justify-content: space-between;
-        align-items: center;
         margin: 2rem;
+
+        @include tablette() {
+            flex-direction: column;
+            gap: 3rem;
+        }
 
         &__cat__title {
             @include title-lg();
@@ -126,7 +330,6 @@ body {
 
         &__cat__item {
             margin-top: 1rem;
-
         }
     }
 
@@ -134,6 +337,14 @@ body {
         display: flex;
         margin: 1rem;
         justify-content: space-between;
+
+        @include tablette() {
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            gap: 1rem;
+        }
 
         & ul {
             display: flex;
@@ -147,44 +358,18 @@ body {
     justify-content: space-around;
     gap: 1rem;
 
+    @include tablette() {
+        width: 50%;
+    }
+
+    @include telephone() {
+        width: 100%;
+    }
+
     & li {
-        padding: .8rem;
+        padding: 0.8rem;
         background-color: $primary;
         border-radius: 100%;
         color: $background;
-
     }
-}
-
-.button-primary {
-    @include para-md-lg();
-    background-color: $primary;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-    padding-left: 2rem;
-    padding-right: 2rem;
-    gap: 1rem;
-    display: flex;
-    align-items: center;
-    border: none;
-    border-radius: 10px;
-    color: $background;
-    text-transform: uppercase;
-
-    & ion-icon {
-        color: $background;
-    }
-}
-
-.button-secondary {
-    background: none;
-    border-color: $white;
-    @include para-md-lg();
-    color: $white;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-    padding-left: 2rem;
-    padding-right: 2rem;
-    border-radius: 10px;
-    text-transform: uppercase;
 }

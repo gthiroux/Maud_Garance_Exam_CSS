@@ -14,29 +14,56 @@
       <nav class="header__nav">
         <ul class="header__nav__list">
           <li>
-            <a href="#accueil" class="header__nav__list__item">ACCUEIL</a>
+            <a
+              href="#accueil"
+              class="header__nav__list__item"
+              aria-label="accueil"
+              >ACCUEIL</a
+            >
           </li>
-          <li><a href="#" class="header__nav__list__item">COLLECTION</a></li>
-          <li><a href="#" class="header__nav__list__item">A PROPOS</a></li>
-          <li><a href="#" class="header__nav__list__item">CONTACT</a></li>
+          <li>
+            <a href="#" class="header__nav__list__item" aria-label="collection"
+              >COLLECTION</a
+            >
+          </li>
+          <li>
+            <a href="#" class="header__nav__list__item" aria-label="a propos"
+              >A PROPOS</a
+            >
+          </li>
+          <li>
+            <a
+              href="#contact"
+              class="header__nav__list__item"
+              aria-label="contact"
+              >CONTACT</a
+            >
+          </li>
         </ul>
       </nav>
       <div class="header__icon">
-        <div><ion-icon name="basket-outline"></ion-icon></div>
-        <div><ion-icon name="menu-outline"></ion-icon></div>
+        <div>
+          <ion-icon
+            name="basket-outline"
+            aria-label="panier shopping"
+          ></ion-icon>
+        </div>
+        <div>
+          <ion-icon name="menu-outline" aria-label="menu burger"></ion-icon>
+        </div>
       </div>
     </header>
-    <div class="heroe" id="accueil">
-      <div class="heroe__content">
-        <p class="heroe__border">Nouvelle collection 2026</p>
-        <h1 class="heroe__content__title">
-          Walk the future <span class="heroe__content__title__span">.</span>
+    <div class="hero" id="accueil">
+      <div class="hero__content">
+        <p class="hero__border">Nouvelle collection 2026</p>
+        <h1 class="hero__content__title">
+          Walk the future <span class="hero__content__title__span">.</span>
         </h1>
         <p>
           Des sneakers premium conçues pour ceux qui donnent le rythme. Confort
           inégalé, design audacieux, attitude streetwear.
         </p>
-        <div class="heroe__content__buttons">
+        <div class="hero__content__buttons">
           <button class="button-primary">
             Acheter <ion-icon name="arrow-forward-outline"></ion-icon>
           </button>
@@ -44,10 +71,22 @@
         </div>
       </div>
     </div>
+    
+    <div class="marques">
+      <p class="marques__text">Nike</p>
+      <p class="marques__point"><ion-icon name="ellipse"></ion-icon></p>
+      <p class="marques__text">Adidas</p>
+      <p class="marques__point"><ion-icon name="ellipse"></ion-icon></p>
+      <p class="marques__text">New Balance</p>
+      <p class="marques__point"><ion-icon name="ellipse"></ion-icon></p>
+      <p class="marques__text">Puma</p>
+      <p class="marques__point"><ion-icon name="ellipse"></ion-icon></p>
+      <p class="marques__text">Jordan</p>
+    </div>
 
-    <div class="contact">
+    <div class="contact" id="contact">
       <h4 class="contact__mini-title">Restez informé</h4>
-      <h2 class="contact__title">Accés Anticipé & drop exclusifs</h2>
+      <h2 class="contact__title">Accès Anticipé & drop exclusifs</h2>
       <p class="contact__content">
         Rejoignez plus de 20 000 passionnés de sneakers. Soyez les premiers
         informés dès les nouvelles sorties, restocks et offres réservées aux

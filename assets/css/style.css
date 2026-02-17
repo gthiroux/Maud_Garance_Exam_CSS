@@ -25,6 +25,7 @@ body {
   box-shadow: 4px 5px 5px #48c7b3;
   background-color: #282729;
   text-transform: uppercase;
+  position: absolute;
   z-index: 2;
 }
 .header__name {
@@ -32,6 +33,14 @@ body {
   font-weight: 700;
   font-style: normal;
   font-size: 24px;
+}
+@media screen and (max-width: 1275px) {
+  .header__name {
+    font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 18px;
+  }
 }
 .header__name__span {
   font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
@@ -43,6 +52,11 @@ body {
 .header__nav {
   width: 50%;
 }
+@media screen and (max-width: 1275px) {
+  .header__nav {
+    display: none;
+  }
+}
 .header__nav__list {
   display: flex;
   justify-content: center;
@@ -51,12 +65,19 @@ body {
 .header__nav__list__item {
   color: #ffffff;
 }
+.header__nav__list__item:hover {
+  color: #48c7b3;
+  text-decoration: underline #48c7b3;
+}
 .header__icon {
   display: flex;
-  gap: 1rem;
+  gap: 2rem;
+}
+.header__icon ion-icon {
+  font-size: 2rem;
 }
 
-.heroe {
+.hero {
   height: 100vh;
   width: 100%;
   background-image: url("/assets/img/img-hero-section.jpeg");
@@ -64,7 +85,7 @@ body {
   justify-content: center;
   align-items: center;
 }
-.heroe__border {
+.hero__border {
   display: flex;
   justify-content: center;
   padding: 0.8rem;
@@ -72,7 +93,12 @@ body {
   border: solid 2px #ffffff;
   border-radius: 8px;
 }
-.heroe__content {
+@media screen and (max-width: 1275px) {
+  .hero__border {
+    padding: 0.4rem;
+  }
+}
+.hero__content {
   background: rgba(40, 39, 41, 0.2);
   width: 40%;
   height: auto;
@@ -80,25 +106,255 @@ body {
   display: flex;
   flex-direction: column;
 }
-.heroe__content__title {
+@media screen and (max-width: 1275px) {
+  .hero__content {
+    width: 75%;
+  }
+}
+.hero__content__title {
   font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
   font-weight: 700;
   font-style: normal;
   font-size: 104px;
   text-transform: uppercase;
 }
-.heroe__content__title__span {
+@media screen and (max-width: 1275px) {
+  .hero__content__title {
+    font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 64px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .hero__content__title {
+    font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 48px;
+  }
+}
+.hero__content__title__span {
   font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
   font-weight: 700;
   font-style: normal;
   font-size: 104px;
   color: #48c7b3;
 }
-.heroe__content__buttons {
+@media screen and (max-width: 1275px) {
+  .hero__content__title__span {
+    font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 64px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .hero__content__title__span {
+    font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 48px;
+  }
+}
+.hero__content__buttons {
   display: flex;
   justify-content: center;
   gap: 2rem;
   margin-top: 2rem;
+}
+@media screen and (max-width: 600px) {
+  .hero__content__buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.marques {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin: 1rem;
+}
+@media screen and (max-width: 600px) {
+  .marques {
+    flex-wrap: wrap;
+  }
+}
+.marques p {
+  font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 24px;
+}
+@media screen and (max-width: 600px) {
+  .marques p {
+    font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 24px;
+  }
+}
+
+.button-primary {
+  font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 18px;
+  background-color: #48c7b3;
+  padding: 0.6rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  gap: 1rem;
+  display: flex;
+  align-items: center;
+  border: none;
+  border-radius: 10px;
+  color: #282729;
+  text-transform: uppercase;
+}
+.button-primary ion-icon {
+  color: #282729;
+}
+@media screen and (max-width: 1275px) {
+  .button-primary {
+    font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 16px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .button-primary {
+    font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 16px;
+  }
+}
+
+.button-secondary {
+  background: none;
+  border-color: #ffffff;
+  font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 18px;
+  color: #ffffff;
+  padding: 0.6rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  border-radius: 10px;
+  text-transform: uppercase;
+}
+@media screen and (max-width: 1275px) {
+  .button-secondary {
+    font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 16px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .button-secondary {
+    font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 16px;
+  }
+}
+
+.contact {
+  width: 100%;
+  height: auto;
+  gap: 1rem;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  background: #48c7b3;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.contact__mini-title {
+  font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 16px;
+  color: #282729;
+}
+.contact__title {
+  font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 48px;
+  text-transform: uppercase;
+  font-size: 48px;
+  color: #282729;
+  text-align: center;
+}
+@media screen and (max-width: 600px) {
+  .contact__title {
+    font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 24px;
+  }
+}
+.contact__content {
+  width: 50%;
+  text-align: center;
+  margin: 1rem;
+}
+@media screen and (max-width: 600px) {
+  .contact__content {
+    width: 100%;
+  }
+}
+.contact__form {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+}
+@media screen and (max-width: 1275px) {
+  .contact__form {
+    flex-direction: column;
+  }
+}
+.contact__form__input {
+  width: 30rem;
+  height: 3rem;
+  padding: 1rem;
+  border-radius: 1rem;
+  background: #282729;
+  color: #ffffff;
+}
+@media screen and (max-width: 600px) {
+  .contact__form__input {
+    width: 90vw;
+  }
+}
+.contact__form__btn {
+  background: #282729;
+  color: #ffffff;
+}
+@media screen and (max-width: 600px) {
+  .contact__form__btn {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+}
+.contact__form__btn ion-icon {
+  color: #ffffff;
+}
+.contact__span {
+  font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 16px;
 }
 
 .footer {
@@ -112,8 +368,13 @@ body {
 .footer__list {
   display: flex;
   justify-content: space-between;
-  align-items: center;
   margin: 2rem;
+}
+@media screen and (max-width: 1275px) {
+  .footer__list {
+    flex-direction: column;
+    gap: 3rem;
+  }
 }
 .footer__list__cat__title {
   font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
@@ -131,6 +392,15 @@ body {
   margin: 1rem;
   justify-content: space-between;
 }
+@media screen and (max-width: 1275px) {
+  .footer__legal {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 1rem;
+  }
+}
 .footer__legal ul {
   display: flex;
   gap: 1rem;
@@ -141,49 +411,21 @@ body {
   justify-content: space-around;
   gap: 1rem;
 }
+@media screen and (max-width: 1275px) {
+  .media ul {
+    width: 50%;
+  }
+}
+@media screen and (max-width: 600px) {
+  .media ul {
+    width: 100%;
+  }
+}
 .media ul li {
   padding: 0.8rem;
   background-color: #48c7b3;
   border-radius: 100%;
   color: #282729;
-}
-
-.button-primary {
-  font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
-  font-weight: 700;
-  font-style: normal;
-  font-size: 18px;
-  background-color: #48c7b3;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-  padding-left: 2rem;
-  padding-right: 2rem;
-  gap: 1rem;
-  display: flex;
-  align-items: center;
-  border: none;
-  border-radius: 10px;
-  color: #282729;
-  text-transform: uppercase;
-}
-.button-primary ion-icon {
-  color: #282729;
-}
-
-.button-secondary {
-  background: none;
-  border-color: #ffffff;
-  font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
-  font-weight: 700;
-  font-style: normal;
-  font-size: 18px;
-  color: #ffffff;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-  padding-left: 2rem;
-  padding-right: 2rem;
-  border-radius: 10px;
-  text-transform: uppercase;
 }
 
 /*# sourceMappingURL=style.css.map */
