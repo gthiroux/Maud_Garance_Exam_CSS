@@ -8,13 +8,17 @@
   </head>
   <body>
     <header class="header">
-      <div class="header__name">StepForge</div>
+      <div class="header__name">
+        <span class="header__name__span">Step</span>Forge
+      </div>
       <nav class="header__nav">
         <ul class="header__nav__list">
-          <li><a href="" class="header__nav__list__item">ACCUEIL</a></li>
-          <li><a href="" class="header__nav__list__item">COLLECTION</a></li>
-          <li><a href="" class="header__nav__list__item">A PROPOS</a></li>
-          <li><a href="" class="header__nav__list__item">CONTACT</a></li>
+          <li>
+            <a href="#accueil" class="header__nav__list__item">ACCUEIL</a>
+          </li>
+          <li><a href="#" class="header__nav__list__item">COLLECTION</a></li>
+          <li><a href="#" class="header__nav__list__item">A PROPOS</a></li>
+          <li><a href="#" class="header__nav__list__item">CONTACT</a></li>
         </ul>
       </nav>
       <div class="header__icon">
@@ -22,59 +26,95 @@
         <div><ion-icon name="menu-outline"></ion-icon></div>
       </div>
     </header>
-    <div class="heroe">
-      <img src="assets/img/img-hero-section.jpeg" alt="" />
-      <div>
-        <p>Nouvelle collection 2026</p>
-        <h1>Walk the future</h1>
-        <p>Des sneakers premium conçues</p>
+    <div class="heroe" id="accueil">
+      <div class="heroe__content">
+        <p class="heroe__border">Nouvelle collection 2026</p>
+        <h1 class="heroe__content__title">
+          Walk the future <span class="heroe__content__title__span">.</span>
+        </h1>
+        <p>
+          Des sneakers premium conçues pour ceux qui donnent le rythme. Confort
+          inégalé, design audacieux, attitude streetwear.
+        </p>
+        <div class="heroe__content__buttons">
+          <button class="button-primary">
+            Acheter <ion-icon name="arrow-forward-outline"></ion-icon>
+          </button>
+          <button class="button-secondary">Notre histoire</button>
+        </div>
       </div>
     </div>
 
-    <footer>
-      <div>
-        <div class="footer__list">
-          <h4 class="footer__list__title">Boutique</h4>
+    <div class="contact">
+      <h4 class="contact__mini-title">Restez informé</h4>
+      <h2 class="contact__title">Accés Anticipé & drop exclusifs</h2>
+      <p class="contact__content">
+        Rejoignez plus de 20 000 passionnés de sneakers. Soyez les premiers
+        informés dès les nouvelles sorties, restocks et offres réservées aux
+        membres.
+      </p>
+      <div class="contact__form">
+        <input
+          type="text"
+          class="contact__form__input"
+          placeholder="Entrez votre adresse mail"
+        />
+        <button class="button-primary contact__form__btn">
+          S'inscrire <ion-icon name="arrow-forward-outline"></ion-icon>
+        </button>
+      </div>
+      <span class="contact__span"
+        >Pas de spam, désinscription à tout moment. Nous respectons votre vie
+        privée.</span
+      >
+    </div>
+
+    <footer class="footer">
+      <div class="footer__list">
+        <div class="footer__list__cat">
+          <h4 class="footer__list__cat__title">Boutique</h4>
           <ul>
-            <li class="footer__list__item">Nouveauté</li>
-            <li class="footer__list__item">Meilleures ventes</li>
-            <li class="footer__list__item">Homme</li>
-            <li class="footer__list__item">Femme</li>
-            <li class="footer__list__item">Promotions</li>
+            <li class="footer__list__cat__item">Nouveauté</li>
+            <li class="footer__list__cat__item">Meilleures ventes</li>
+            <li class="footer__list__cat__item">Homme</li>
+            <li class="footer__list__cat__item">Femme</li>
+            <li class="footer__list__cat__item">Promotions</li>
           </ul>
         </div>
-        <div class="footer__list">
-          <h4 class="footer__list__title">Aide</h4>
+        <div class="footer__list__cat">
+          <h4 class="footer__list__cat__title">Aide</h4>
           <ul>
-            <li class="footer__list__item">FAQ</li>
-            <li class="footer__list__item">Infos livraison</li>
-            <li class="footer__list__item">Retours & échanges</li>
-            <li class="footer__list__item">Guide des tailles</li>
-            <li class="footer__list__item">Nous contacter</li>
+            <li class="footer__list__cat__item">FAQ</li>
+            <li class="footer__list__cat__item">Infos livraison</li>
+            <li class="footer__list__cat__item">Retours & échanges</li>
+            <li class="footer__list__cat__item">Guide des tailles</li>
+            <li class="footer__list__cat__item">Nous contacter</li>
           </ul>
         </div>
-        <div class="footer__list">
-          <h4 class="footer__list__title">Légal</h4>
+        <div class="footer__list__cat">
+          <h4 class="footer__list__cat__title">Légal</h4>
           <ul>
-            <li class="footer__list__item">Politique de confidentialité</li>
-            <li class="footer__list__item">Conditions générales</li>
-            <li class="footer__list__item">Politique des cookies</li>
-            <li class="footer__list__item">Accessibilité</li>
+            <li class="footer__list__cat__item">
+              Politique de confidentialité
+            </li>
+            <li class="footer__list__cat__item">Conditions générales</li>
+            <li class="footer__list__cat__item">Politique des cookies</li>
+            <li class="footer__list__cat__item">Accessibilité</li>
           </ul>
         </div>
-        <div class="footer__list media">
-          <h4 class="footer__list__title">Suivez-nous</h4>
+        <div class="footer__list__cat media">
+          <h4 class="footer__list__cat__title">Suivez-nous</h4>
           <ul>
-            <li class="footer__list__item">
+            <li class="footer__list__cat__item">
               <ion-icon name="logo-instagram"></ion-icon>
             </li>
-            <li class="footer__list__item">
+            <li class="footer__list__cat__item">
               <ion-icon name="logo-twitter"></ion-icon>
             </li>
-            <li class="footer__list__item">
+            <li class="footer__list__cat__item">
               <ion-icon name="logo-tiktok"></ion-icon>
             </li>
-            <li class="footer__list__item">
+            <li class="footer__list__cat__item">
               <ion-icon name="logo-youtube"></ion-icon>
             </li>
           </ul>
@@ -83,9 +123,9 @@
       <div class="footer__legal">
         <p>©2026 STEPFORGE. Tous droits réservés.</p>
         <ul>
-          <li></li>
-          <li></li>
-          <li></li>
+          <li>Confidentialité</li>
+          <li>CGV</li>
+          <li>Cookies</li>
         </ul>
       </div>
     </footer>
