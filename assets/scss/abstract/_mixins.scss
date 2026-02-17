@@ -1,0 +1,123 @@
+@use "./variables"as *;
+
+// @mixin nav-md {
+//     font-family: $segoe;
+//     font-weight: $font-weight-sm;
+//     font-style: normal;
+//     font-size: $font-size-md;
+//     color: $white;
+//     display: flex;
+//     justify-content: space-around;
+// }
+
+@mixin nav-sm {
+    font-family: $segoe;
+    font-weight: $font-weight-md;
+    font-style: normal;
+    font-size: $font-size-xs;
+}
+
+@mixin title-4xl {
+    font-family: $segoe;
+    font-weight: $font-weight-lg;
+    font-style: normal;
+    font-size: $font-size-4xl;
+}
+
+@mixin title-3xl {
+    font-family: $segoe;
+    font-weight: $font-weight-lg;
+    font-style: normal;
+    font-size: $font-size-3xl;
+}
+
+@mixin title-xxl {
+    font-family: $segoe;
+    font-weight: $font-weight-lg;
+    font-style: normal;
+    font-size: $font-size-xxl;
+}
+
+@mixin title-xl {
+    font-family: $segoe;
+    font-weight: $font-weight-lg;
+    font-style: normal;
+    font-size: $font-size-xl;
+}
+
+@mixin title-lg {
+    font-family: $segoe;
+    font-weight: $font-weight-lg;
+    font-style: normal;
+    font-size: $font-size-lg;
+}
+
+@mixin title-md {
+    font-family: $segoe;
+    font-weight: $font-weight-md;
+    font-style: normal;
+    font-size: $font-size-md;
+}
+
+@mixin para-lg-lg {
+    font-family: $segoe;
+    font-weight: $font-weight-lg;
+    font-style: normal;
+    font-size: $font-size-lg;
+}
+
+@mixin para-lg-md {
+    font-family: $segoe;
+    font-weight: $font-weight-md;
+    font-style: normal;
+    font-size: $font-size-lg;
+}
+
+@mixin para-lg-sm {
+    font-family: $segoe;
+    font-weight: $font-weight-sm;
+    font-style: normal;
+    font-size: $font-size-lg;
+}
+
+@mixin para-md-sm {
+    font-family: $segoe;
+    font-weight: $font-weight-sm;
+    font-style: normal;
+    font-size: $font-size-md;
+}
+
+@mixin para-md-md {
+    font-family: $segoe;
+    font-weight: $font-weight-md;
+    font-style: normal;
+    font-size: $font-size-md;
+}
+
+@mixin para-md-lg {
+    font-family: $segoe;
+    font-weight: $font-weight-lg;
+    font-style: normal;
+    font-size: $font-size-md;
+}
+
+@mixin para-sm-sm {
+    font-family: $segoe;
+    font-weight: $font-weight-sm;
+    font-style: normal;
+    font-size: $font-size-sm;
+}
+
+@mixin para-md-sm {
+    font-family: $segoe;
+    font-weight: $font-weight-md;
+    font-style: normal;
+    font-size: $font-size-sm;
+}
+
+@mixin para-lg-sm {
+    font-family: $segoe;
+    font-weight: $font-weight-lg;
+    font-style: normal;
+    font-size: $font-size-sm;
+}
